@@ -1,0 +1,62 @@
+/* Add this to your existing CSS */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins for body text */
+    text-align: center; /* Center align text */
+    animation: gradientAnimation 10s ease infinite; /* Apply the gradient animation */
+    background: linear-gradient(270deg, #ffffff, #e51313, #444444); /* Set the initial gradient */
+    background-size: 400% 400%; /* Size of the background gradient */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Midpoint position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive; /* Use Abril Fatface for headings */
+    font-size: 3em; /* Make the header big */
+    color: #ffffff; /* Optional: change color */
+}
+
+a:hover img {
+    transform: scale(1.1); /* Scale the image up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+img {
+    margin: 10px;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Add this to your existing CSS */
+a {
+    font-family: 'Abril Fatface', cursive;
+    position: relative; /* Position relative to allow absolute positioning of overlay */
+    display: inline-block; /* Ensures the anchor behaves like a block for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+}
+
+.overlay {
+    position: absolute; /* Position the overlay absolutely */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: rgba(255, 255, 255, 0.775); /* Text color */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+a:hover .overlay {
+    opacity: 20; /* Show the overlay on hover */
+}

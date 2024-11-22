@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+<h1>Sabrina Carpenter's Music Albums</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'sns/css/styles.css' %}">
+
+<video id="myVideo" muted loop playsinline style="width: 100%; height: auto; margin: 20px auto; display: block;">
+    <source src="{% static 'sns/videos/header_video.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<script>
+    var video = document.getElementById('myVideo');
+
+    // Add an event listener to the video element
+    video.addEventListener('click', function() {
+        video.muted = false; // Unmute the video
+        video.play(); // Start playing the video
+    });
+
+    // Optionally, you can also add a listener to pause the video if it is clicked again
+    video.addEventListener('dblclick', function() {
+        if (!video.paused) {
+            video.pause(); // Pause the video if it's playing
+        } else {
+            video.play(); // Resume playing if it's paused
+        }
+    });
+</script>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNS1YoEOaxYxoeHdZBXLy8aQ&si=4l1FgkX6yGZuFzzs">
+        <img src="{% static 'sns/images/1.jpg' %}" alt="Song 1 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNR7bww-tfkLMR-U7baPjRHE&si=Fuz_KgyuQ-nyYyOC">
+        <img src="{% static 'sns/images/song2_cover.jpg' %}" alt="Song 2 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNQZy1Tbjrk_xO7nuWsnQb5g&si=u4XEV9SEK_4G-fZQ">
+        <img src="{% static 'sns/images/song3_cover.jpg' %}" alt="Song 3 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNTcnUU0FVqrOrJVoL2PEjly&si=e3aaCZ8_d0Kvahp2">
+        <img src="{% static 'sns/images/song4_cover.jpg' %}" alt="Song 4 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNQ16y4UZ0hzX_5_K-sjQTtX&si=Yu01BLf1DndnJK9M">
+        <img src="{% static 'sns/images/song5_cover.jpg' %}" alt="Song 5 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNSqFPKxuEyLr62YuXiJXno_&si=Lv5NjkLhe0el0zK4">
+        <img src="{% static 'sns/images/song6_cover.jpg' %}" alt="Song 6 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNQUps9O6qT2rag-75RP4qCz&si=i5eKJWUxNvAaavIX">
+        <img src="{% static 'sns/images/song7_cover.jpg' %}" alt="Song 7 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLq6sYIxQliNSa7xly0IfjwWRQ8nu9EaaW&si=EyOMgvCXQ9LpMaiN">
+        <img src="{% static 'sns/images/song8_cover.png' %}" alt="Song 8 Cover" width="300" style="margin: 10px;">
+        <span class="overlay">Open Album</span>
+    </a>
+</div>
+
+{% endblock %}
